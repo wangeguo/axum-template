@@ -1,0 +1,15 @@
+# configuration for https://cargo-generate.github.io/cargo-generate/
+
+[template]
+cargo_generate_version = ">=0.20.0"
+exclude = [".github/workflows/build.yml"]
+
+[placeholders.description]
+type = "string"
+prompt = "Short description of the project"
+default = "An example generated using the axum template"
+
+[placeholders.owner]
+type = "string"
+prompt = "What's your GitHub username or Organization name"
+default = "unnamed"
