@@ -4,7 +4,7 @@ default:
 
 # Build the project
 build:
-    RUST_BACKTRACE=1 cargo build --workspace --all-features --tests --bins --benches
+    cargo build --workspace --all-features --all-targets
 
 # Clean the build artifacts
 clean:
@@ -12,7 +12,7 @@ clean:
 
 # Linting
 clippy:
-   cargo clippy --workspace --all-features --tests --bins --benches -- -D warnings
+   cargo clippy --workspace --all-features --all-targets -- -D warnings
 
 # Check formatting
 check-fmt:
@@ -24,7 +24,7 @@ fmt:
 
 # Test the project
 test:
-    RUST_BACKTRACE=1 cargo test --workspace --all-features --verbose
+    cargo test --workspace --all-features --all-targets
 
 # Run all the checks
 check:
@@ -37,3 +37,7 @@ all:
     just clean
     just check
     just build
+
+# Run the main program
+run:
+    cargo run --bin {{project-name}}
