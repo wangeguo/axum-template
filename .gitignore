@@ -13,4 +13,5 @@
 .idea/
 
 # Used for environment variables
-.env
+.env*
+!.env.example
