@@ -17,6 +17,7 @@ pub mod config;
 pub mod context;
 pub mod errors;
 pub mod handlers;
+pub mod logger;
 pub mod requests;
 pub mod responses;
 pub mod routes;
